@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using VoteApp.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="jumbotron text-center" style="margin-top: 35px;">
+        <h1>Dashboard</h1>
+        <p>What would you like to do today?</p>
+        <p><a class="btn btn-lg btn-success" asp-controller="Polls" asp-action="Create">New Poll</a> <a class="btn btn-lg btn-primary" asp-controller="Account" asp-action="Polls">My Polls</a></p>
+    </div>
+}
+else
+{
+    <div class="jumbotron text-center" style="margin-top: 35px;">
+        <h1>VoteApp</h1>
+        <p>Create custom polls with live results.</p>
+        <p><a class="btn btn-lg btn-success" asp-controller="Account" asp-action="Register">Sign Up</a></p>
+    </div>
+}

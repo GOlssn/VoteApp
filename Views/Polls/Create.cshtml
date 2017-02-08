@@ -1,0 +1,28 @@
+﻿
+<div class="row" style="margin-top: 35px;">
+    <div class="col-md-4 col-md-offset-4">
+        <form asp-controller="Polls" asp-action="Create" method="post">
+            <div class="text-center">
+                <label for="Question">Question</label>
+            </div>
+            <div class="form-group col-md-10 col-md-offset-1">
+                <input type="text" name="Question" class="form-control" />
+            </div>
+            <div class="text-center">
+                <label for="Options">Options</label>
+            </div>
+            <div class="form-group col-md-10 col-md-offset-1" id="poll-options">
+                <input type="text" name="Options" class="form-control" />
+                <input type="text" name="Options" class="form-control" />
+            </div>
+            <div class="text-center">
+                <div class="form-group">
+                    <a class="btn btn-md btn-default" id="moreOptions">More Options</a>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-md btn-success" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

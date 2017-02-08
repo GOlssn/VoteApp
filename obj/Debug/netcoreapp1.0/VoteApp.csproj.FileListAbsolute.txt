@@ -1,0 +1,10 @@
+D:\CSharp Projects\VoteApp\VoteApp\bin\Debug\netcoreapp1.0\VoteApp.deps.json
+D:\CSharp Projects\VoteApp\VoteApp\bin\Debug\netcoreapp1.0\VoteApp.runtimeconfig.json
+D:\CSharp Projects\VoteApp\VoteApp\bin\Debug\netcoreapp1.0\VoteApp.runtimeconfig.dev.json
+D:\CSharp Projects\VoteApp\VoteApp\bin\Debug\netcoreapp1.0\VoteApp.dll
+D:\CSharp Projects\VoteApp\VoteApp\bin\Debug\netcoreapp1.0\VoteApp.pdb
+D:\CSharp Projects\VoteApp\VoteApp\obj\Debug\netcoreapp1.0\UserSecretsAssemblyInfo.cs
+D:\CSharp Projects\VoteApp\VoteApp\obj\Debug\netcoreapp1.0\VoteApp.AssemblyInfo.cs
+D:\CSharp Projects\VoteApp\VoteApp\obj\Debug\netcoreapp1.0\VoteApp.dll
+D:\CSharp Projects\VoteApp\VoteApp\obj\Debug\netcoreapp1.0\VoteApp.pdb
+D:\CSharp Projects\VoteApp\VoteApp\obj\Debug\netcoreapp1.0\VoteApp.csprojResolveAssemblyReference.cache

@@ -1,0 +1,32 @@
+﻿@model Poll
+
+<div class="row" style="margin-top: 35px;">
+    <div class="col-md-4 col-md-offset-4">
+        <form asp-controller="Polls" asp-action="Edit" method="post">
+            <input type="hidden" name="Id" value="@Model.Id" style="display: none;" />
+            <div class="text-center">
+                <label for="Question">Question</label>
+            </div>
+            <div class="form-group col-md-10 col-md-offset-1">
+                <input type="text" name="Question" class="form-control" value="@Model.Question" />
+            </div>
+            <div class="text-center">
+                <label for="Options">Options</label>
+            </div>
+            <div class="form-group col-md-10 col-md-offset-1" id="poll-options">
+                @foreach (var option in Model.Options)
+                {
+                    <input type="text" name="Options" class="form-control" value="@option.Value" />
+                }
+            </div>
+            <div class="text-center">
+                <div class="form-group">
+                    <a class="btn btn-md btn-default" id="moreOptions">More Options</a>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-md btn-success" type="submit">Save Changes</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
