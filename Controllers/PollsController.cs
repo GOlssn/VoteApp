@@ -87,9 +87,13 @@ namespace VoteApp.Controllers
 
         [HttpGet]
         [Authorize]
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
-            Poll poll = _context.Polls.Include(p => p.Options).SingleOrDefault(p => p.Id == id);
+            Poll poll = _context.Polls.Include(p => p.Options).Include(p => p.User).SingleOrDefault(p => p.Id == id);
+            if(poll.ApplicationUserId != _userManager.GetUserId(HttpContext.User))
+            {
+                return LocalRedirect("/Account/Polls");
+            }
             return View(poll);
         }
 
@@ -97,7 +101,12 @@ namespace VoteApp.Controllers
         [Authorize]
         public async Task<IActionResult> Edit(Poll poll, string[] options)
         {
-            Poll pollToSave = _context.Polls.Include(p => p.Options).SingleOrDefault(p => p.Id == poll.Id);
+            Poll pollToSave = _context.Polls.Include(p => p.Options).Include(p => p.User).SingleOrDefault(p => p.Id == poll.Id);
+
+            if (pollToSave.ApplicationUserId != _userManager.GetUserId(HttpContext.User))
+            {
+                return Unauthorized();
+            }
 
             pollToSave.Question = poll.Question;
 
