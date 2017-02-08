@@ -15,4 +15,4 @@ Possible To-Do's:
   - Allow a user to delete options
   - Add validation
 
-Download the entire solution here: 
+Download the entire solution here: http://www.filedropper.com/voteapp
